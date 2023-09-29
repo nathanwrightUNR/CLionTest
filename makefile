@@ -1,6 +1,8 @@
 exec: main.o
-	g++ -o main.o exec
-main.o: main.cpp
+	g++ -o exec main.o
+
+main.o: main.cpp helloworld.h
 	g++ -c main.cpp
-make clean:
+
+clean:
 	rm *.o exec
